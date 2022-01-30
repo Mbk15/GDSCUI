@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>GDSC JAVASCRIPT CLASS</h1>
+    <h2 id="demo"></h2>
+
+    <script>
+      console.log("Hello World !");
+
+      var age = 18;
+      console.log("age");
+      // Number
+
+      var num = 7888;
+      // String
+      console.log(num);
+
+      var string = "This is a String";
+      console.log(string);
+
+      console.log(string + " is " + num);
+      // Boolean
+
+      var dob = 1988;
+
+      var currentYear = 2022;
+
+      var analyze = currentYear > dob;
+
+      console.log(analyze);
+      console.log(analyze + " is " + dob);
+      // undefined
+
+      dob = 1960;
+      currentYear = 2024;
+
+      console.log(dob);
+      console.log(currentYear);
+
+      var test;
+      console.log(test);
+
+      var now = 1008;
+      var then = 910;
+
+      var johnAge = 33;
+      var ageMark = 28;
+      var johnOlder = johnAge > ageMark;
+      console.log(johnOlder);
+
+      var add = (now / then) * now;
+      var play;
+      console.log(play + johnOlder);
+      var age = 56;
+      var nu;
+      var name = "Cuppy";
+      console.log(typeof age);
+      console.log(typeof nu);
+      console.log(typeof name);
+      console.log(typeof johnOlder);
+
+      console.log(add);
+
+      var neymarMass = 68;
+      var neymarHeight = 1.75;
+
+      var mbapeMass = 73;
+      var mbapeHeight = 1.78;
+
+      var neymarBMI = Math.floor(neymarMass / (neymarHeight * neymarHeight));
+
+      var mbapeBMI = Math.floor(mbapeMass / (mbapeHeight * mbapeHeight));
+
+      var bmiComp = neymarBMI > mbapeBMI;
+
+      console.log(bmiComp);
+
+      console.log(" Neymar BMI is " + neymarBMI);
+      console.log(" Mbappe BMI is " + mbapeBMI);
+
+      console.log("Is Neymar's BMI higher than Mbappe's? " + bmiComp);
+
+      var age = 18;
+
+      if (!age) {
+        console.log("He is a teenager");
+      } else {
+        console.log("He is an Adult");
+      }
+
+      //Let's determine if He's a boy, Man or Teenager
+      // boy// from 1 to 12
+      // teenager // from 13 to 19
+      // Man // 20 and above.
+
+      var testingName = "David";
+      var age = 40;
+
+      if (age >= 1 && age <= 11) {
+        console.log(testingName + " is a Boy");
+      } else if (age >= 13 && age <= 18) {
+        console.log(testingName + " is a teenager");
+      } else {
+        console.log(testingName + " is a Man");
+      }
+
+      var currentTime = new Date().getHours();
+      console.log(currentTime);
+
+      currentTime < 10
+        ? console.log("Good Morning")
+        : console.log("Good Night");
+      // if (currentTime < 10) {
+      //   console.log("Good Morning Comrade !!");
+      // } else if (currentTime < 20) {
+      //   console.log("Good Day Comrade !!");
+      // } else {
+      //   console.log("Good Night Comrade !!");
+      // }
+
+      var level = 100;
+
+      const course =
+        level >= 200
+          ? console.log("Departmental Course")
+          : console.log("Borrowed Course");
+
+      function checkAge(birthYear) {
+        var evaluateAge = 2022 - birthYear;
+        return evaluateAge;
+      }
+
+      console.log(" This is the new function " + checkAge(2000));
+
+      const yearsTillRetirement = (birthYear) => {
+        let age = checkAge(birthYear);
+
+        let yearsLeft = 65 - age;
+        return yearsLeft;
+      };
+      console.log("Experimenting for " + yearsTillRetirement(1987));
+
+      console.log(yearsTillRetirement(2005));
+      let evaRetire = yearsTillRetirement(1996);
+
+      evaRetire
+        ? console.log(
+            " James Still has " + evaRetire + " Years left till retirement"
+          )
+        : console.log("James has retired");
+
+      console.log("Esxperimenting for " + yearsTillRetirement(1987));
+
+      function toCelcius(farheneitValue) {
+        return Math.floor((9 / 5) * farheneitValue + 32);
+      }
+      let getData;
+
+      // getData = prompt("Enter Your Celcius Scale");
+      const reply = toCelcius(getData);
+      console.log(`Celcius conversion is ${reply} `);
+      // alert(`The Converted Celcius temp is ${reply} in Farheneit`);
+
+      function areaOfTriangle(base, height) {
+        return Math.floor((base * height) / 2);
+      }
+
+      console.log(`The answer is ${areaOfTriangle(20, 15)}`);
+
+      let playerName = ["Hakimi", "Neymar", "Mbappe", "Di Maria"];
+
+      let randomYears = new Array(2013, 2019, 2023, 1898);
+      playerName.pop();
+      playerName.push("Messi");
+      playerName.shift();
+
+      playerName.unshift("Bernat");
+      delete playerName[3];
+      let arsenalYouth = ["Balogun", "Biereth", "Omar", "Rekik"];
+
+      let seniorPlayers = ["Saka", "Odegaard", "ESR", "Martinelli"];
+
+      seniorPlayers.splice(2, 0, "Lacazette", "Partey");
+
+      let cutOut = seniorPlayers.slice(1);
+      console.log(cutOut);
+
+      console.log(seniorPlayers);
+
+      let fullSquad = arsenalYouth.concat(seniorPlayers);
+
+      console.log(`The FullSquad is ${fullSquad}`);
+
+      console.log(playerName);
+      let stringvariable = playerName.toString();
+      let joinvariable = playerName.join(" % ");
+
+      console.log(`This is the Strigified ${stringvariable}`);
+      console.log(`This is the Joint Array ${joinvariable}`);
+
+      console.log(randomYears);
+
+      console.log(playerName);
+
+      const retrieveName = playerName[0];
+
+      console.log(playerName);
+      console.log(retrieveName);
+
+      // Coding Challenge 4
+
+      let myArray = ["Johnson", 45, true];
+      console.log(myArray);
+
+      myArray[0] = "Emanuel";
+
+      myArray.unshift("This is the first item");
+      console.log(myArray);
+
+      let unifiedInst = [
+        "UI",
+        "Unilag",
+        "Lautech",
+        "Futa",
+        "Fuoye",
+        "Babcock",
+        "Uniosun",
+        "Kwasu",
+      ];
+
+      unifiedInst.pop(7);
+
+      console.log(unifiedInst);
+
+      unifiedInst.push("Kwasu", "Havard");
+
+      console.log(unifiedInst);
+
+      let myString = unifiedInst.join("-");
+
+      // Javascript Objects
+
+      let realMadrid = {
+        nickname: "Galacticos",
+        location: "Spain",
+        manager: "Anceloti",
+        outfieldCol: "White",
+        homeground: "Santiago Bernabeu",
+        wonUcl: true,
+        fullExpression: function () {
+          return this.nickname + this.homeground;
+        },
+      };
+
+      console.log(realMadrid.fullExpression());
+
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      console.log(person.firstName);
+      console.log(person["lastName"]);
+      let demo = document.querySelector("#demo");
+
+      person.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+      demo.innerHTML = "My father is " + person.name();
+
+      demo.innerHTML = realMadrid.fullExpression();
+      console.log(person.fullName);
+
+      console.log(realMadrid);
+      console.log(myString);
+      // Dot notation
+      let checkObject = realMadrid.nickname;
+
+      // bracket notaion
+      console.log(realMadrid["manager"]);
+
+      console.log(checkObject);
+
+      let rmLeagueStatus = new Object();
+
+      rmLeagueStatus.rank = "top";
+      rmLeagueStatus["teams"] = 20;
+      rmLeagueStatus["tiers"] = "Liga BBVA";
+
+      console.log(rmLeagueStatus);
+
+      // Object Constructor
+
+      function user(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      const myDad = new user("Olayiwola", "Jimoh", 35, "blue");
+      const myMum = new user("Janet", "Jokanola", 25, "green");
+      console.log(myDad);
+      console.log(myMum);
+    </script>
+  </body>
+</html>
